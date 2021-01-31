@@ -1,0 +1,19 @@
+#+TITLE:Appunti di Aerodinamica
+#+AUTHOR:Marco Callari
+
+* Concetti base
+** Teorema del trasporto di Reynolds
+    Data:
+        - Una funzione $f$ che dipende da spazio e tempo $f(x,t)$
+    Di cui voglio calcolare la derivata nel tempo dell'integrale nel volume di controllo $\Omega(t)$ (nota: variabile nel tempo), ovvero:
+    \begin{gather*}
+    \frac{d}{dt} \int_{\Omega(t)} f \,dV
+    \end{gather*}
+    Utilizzando il teorema di Reynolds, è possibile riscrivere questa derivata di un integrale come:
+    \begin{gather*}
+    \frac{d}{dt} \int_{\Omega(t)} f \,dV = \int_{\Omega(t)}{\frac{\partial f}{\partial t}\,dV} + \int_{\partial\Omega(t)}{(v^b \cdot n)f\,dA}
+    \end{gather*}
+    Dove:
+        - $\partial \Omega(t)$ è la superficie esterna del volume di controllo (superficie di controllo)
+        - $n$ è il versore normale alla superficie $\delta \Omega(t)$
+        - $v^b(x,t)$ è la velocità dell'elemento di area (@TODO: specificare)

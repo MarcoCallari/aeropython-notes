@@ -1,0 +1,55 @@
+% Created 2021-01-31 dom 19:41
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Marco Callari}
+\date{\today}
+\title{Appunti di Aerodinamica}
+\hypersetup{
+ pdfauthor={Marco Callari},
+ pdftitle={Appunti di Aerodinamica},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Concetti base}
+\label{sec:org8350f1a}
+\subsection{Teorema del trasporto di Reynolds}
+\label{sec:org0c62930}
+Data:
+\begin{itemize}
+\item Una funzione \(f\) che dipende da spazio e tempo \(f(x,t)\)
+\end{itemize}
+Di cui voglio calcolare la derivata nel tempo dell'integrale nel volume di controllo \(\Omega(t)\) (nota: variabile nel tempo), ovvero:
+\begin{gather*}
+\frac{d}{dt} \int_{\Omega(t)} f \,dV
+\end{gather*}
+Utilizzando il teorema di Reynolds, è possibile riscrivere questa derivata di un integrale come:
+\begin{gather*}
+\frac{d}{dt} \int_{\Omega(t)} f \,dV = \int_{\Omega(t)}{\frac{\partial f}{\partial t}\,dV} + \int_{\partial\Omega(t)}{(v^b \cdot n)f\,dA}
+\end{gather*}
+Dove:
+\begin{itemize}
+\item \(\partial \Omega(t)\) è la superficie esterna del volume di controllo (superficie di controllo)
+\item \(n\) è il versore normale alla superficie \(\delta \Omega(t)\)
+\item \(v^b(x,t)\) è la velocità dell'elemento di area (@TODO: specificare)
+\end{itemize}
+\end{document}
