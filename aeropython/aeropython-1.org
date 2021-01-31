@@ -1,0 +1,7 @@
+#+TITLE:
+Aeropython 1
+
+* Teorema del trasporto di Reynolds
+    Dati:
+        - Un volume $\Omega(t)$ (nota: variabile nel tempo)
+        - Una superficie che delimita il volume $\delta \Omega(t)$
