@@ -1,4 +1,4 @@
-% Created 2021-01-31 dom 19:41
+% Created 2021-02-13 sab 16:18
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -31,9 +31,46 @@
 
 
 \section{Concetti base}
-\label{sec:org8350f1a}
+\label{sec:org3ae879d}
+\subsection{Punto di vista Lagrangiano}
+\label{sec:org13fc0bc}
+Seguo un volume di controllo nello spazio e ne descrivo l'evoluzione
+\subsection{Punto di vista Euleriano}
+\label{sec:orgb221bd0}
+Fisso gli occhi su un punto in specifico e ne descrivo l'evoluzione
+\subsection{Differenziale di una funzione}
+\label{sec:org773882c}
+Data una funzione \(f\) = \(f(x)\) il suo differenziale \(df\) è definito come:
+\begin{gather*}
+df(x,\Delta x) = \frac{df}{dx} \Delta x
+\end{gather*}
+\subsection{Derivazione derivata materiale}
+\label{sec:org36f2e70}
+Usata per esprimere la variazione di una proprietà del fluido da un punto di vista Lagrangiano (ovvero seguendo  l'evoluzione di un volume infitesimo di fluido)
+Definita come:
+\begin{gather*}
+\frac{Df}{Dx} \equiv \lim_{x_2 \rightarrow x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+\end{gather*}
+Data una funzione \(f = f(x,y,z,t)\), posso approssimare il suo valore in un punto \(P_2\) \(\rightarrow\) \(P_1\) all'istante \(t_2\) \(\rightarrow\) \(t_1\) tramite una serie di Taylor al primo ordine:
+\begin{gather*}
+f(x_2,y_2,z_2,t_2) = f(x_1,y_1,z_1,t_1) + \frac{\partial f}{\partial x} (x_2-x_1) + \frac{\partial f}{\partial y} (y_2 - y_1) + \frac{\partial f}{\partial z} (z_2 - z_1) + \frac{\partial f}{\partial t} (t_2 - t_1)
+\end{gather*}
+Dividendo per \((t_2 - t_1)\) :
+\begin{gather*}
+\frac{f(x_2,y_2,z_2,t_2) - f(x_1,y_1,z_1,t_1)}{t_2 - t_1} = \frac{\partial f}{\partial x} u + \frac{\partial f}{\partial y} v + \frac{\partial f}{\partial z} w + \frac{\partial f}{\partial t}
+\end{gather*}
+Ovvero:
+\begin{gather*}
+\frac{Df}{Dt} = \frac{\partial f}{\partial t} + \frac{\partial f}{\partial x} u + \frac{\partial f}{\partial y} v + \frac{\partial f}{\partial z} w
+\end{gather*}
+Dove \(u\), \(v\), \(w\), sono le velocità in direzione \(x\), \(y\), \(z\)
+Può essere espressa anche come:
+\begin{gather*}
+\frac{Df}{Dt} = \frac{\partial f}{\partial t} + \vec{v} \cdot \nabla f
+\end{gather*}
+
 \subsection{Teorema del trasporto di Reynolds}
-\label{sec:org0c62930}
+\label{sec:org1788b3d}
 Data:
 \begin{itemize}
 \item Una funzione \(f\) che dipende da spazio e tempo \(f(x,t)\)
@@ -50,6 +87,61 @@ Dove:
 \begin{itemize}
 \item \(\partial \Omega(t)\) è la superficie esterna del volume di controllo (superficie di controllo)
 \item \(n\) è il versore normale alla superficie \(\delta \Omega(t)\)
-\item \(v^b(x,t)\) è la velocità dell'elemento di area (@TODO: specificare)
+\item \(v^b(x,t)\) è la velocità dell'elemento di area
 \end{itemize}
+
+\subsection{Equazione di conservazione della massa}
+\label{sec:orgd9e31ba}
+Derivata dal un punto di vista EULERIANO. Considero un volume infinitesimo che circonda un punto \(x\):
+@TODO aggiungere immagine
+Definisco \(\dot{m}(x)\) portata di fluido nel punto \(x\). Usando una serie di Taylor, posso descrivere la portata uscente dalla parete di destra del volume di controllo come:
+\begin{gather*}
+\dot{m}(x+\frac{dx}{2}) =\dot{m}(x) + \frac{\partial \dot{m}}{\partial x} \frac{dx}{2}
+\end{gather*}
+In maniera analoga, la massa uscente dalla parete sinistra del volume di controllo:
+\begin{gather*}
+\dot{m}(x-\frac{dx}{2}) =\dot{m}(x) - \frac{\partial \dot{m}}{\partial x} \frac{dx}{2}
+\end{gather*}
+Prendendo in considerazione esclusivamente l'asse \(x\), la variazione di massa per unità di tempo risulta essere uguale a:
+\begin{gather*}
+\dot{m}(x+\frac{dx}{2}) - \dot{m}(x-\frac{dx}{2}) =\frac{\partial \dot{m}}{\partial x} dx
+\end{gather*}
+Dato che \(\dot{m} = \rho u dy dz\)
+\begin{gather*}
+\dot{m}(x+\frac{dx}{2}) - \dot{m}(x-\frac{dx}{2}) =\frac{\partial (\rho u)}{\partial x} dx dy dz
+\end{gather*}
+Eseguendo in maniera analoga gli stessi calcoli anche per l'asse y e l'asse z, la variazione totale di massa per unità di tempo nel volume di controllo risulta essere:
+\begin{gather*}
+(\frac{\partial (\rho u)}{\partial x} + \frac{\partial (\rho v)}{\partial y} + \frac{\partial (\rho w)}{\partial z}) dx dy dz
+\end{gather*}
+Visto che stiamo analizzando il volume di controllo da un punto di vista Euleriano, la variazione di massa può essere descritta come:
+\begin{gather*}
+\frac{dm}{dt} = \frac{d \rho}{dt} dx dy dz
+\end{gather*}
+Combinando le due equazioni:
+\begin{gather*}
+- \frac{d \rho}{dt} = \frac{\partial (\rho u)}{\partial x} + \frac{\partial (\rho v)}{\partial y} + \frac{\partial (\rho w)}{\partial z}
+\end{gather*}
+(Aggiunto un - in quanto il primo termine è negativo quando la massa del volume di controllo diminusce, mentre il secondo, in questo caso, è positivo)
+Concludendo,
+\begin{gather*}
+\frac{d \rho}{dt} + \nabla \cdot (\rho \vector{v})= 0
+\end{gather*}
+\subsection{Equazione di conservazione della quantità di moto}
+\label{sec:org28bb961}
+@TODO
+\subsection{Fluido incomprimibile \(\rightarrow\) \(\nabla \cdot \vector{v}\) = 0}
+\label{sec:orgf19cdfc}
+Data l'equazione di conservazione della massa,
+\begin{gather*}
+\frac{d \rho}{dt} + \nabla \cdot (\rho \vector{v})= 0
+\end{gather*}
+Imponendo \(\rho\) = const., ricavo che:
+\begin{gather*}
+\rho \nabla \cdot \vector{v}= 0
+\end{gather*}
+Ergo,
+\begin{gather*}
+\nabla \cdot \vector{v}= 0
+\end{gather*}
 \end{document}
