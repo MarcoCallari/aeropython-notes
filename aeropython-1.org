@@ -102,3 +102,51 @@ Data l'equazione di conservazione della massa,
     \begin{gather*}
     \nabla \cdot \vector{v}= 0
     \end{gather*}
+** Relazione tra $\Delta$ p $\rightarrow$ $\Delta$ v
+    @TODO
+** Pathline, streamline, timeline, streakline
+    - Pathline
+    Seguo il movimento di un elemento di fluido da un istante $t_0$ ad un istante $t_0$ + $\Delta$ $t$. Traccio la traiettoria di questo elemento, ottenendo appunto una pathline.
+    - Streakline
+    Prendo un punto $\vec{x_0}$ nel piano ad un istante $t_0$. Traccio la traiettoria che unisce tutti gli elementi di fluido che sono passati per quel punto durante un lasso di tempo $\Delta$ $t$, ottenendo appunto una streakline.
+    - Timeline
+    Dati n elementi normali alla velocità del fluido rilasciati nello stesso istante $t_0$, evidenzio la loro posizione ad un istante $t_1$. Utile per visualizzare il profilo di velocità attorno ad un profilo alare.
+    - Streamline
+    Curva tangente in ogni punto alla velocità del fluido.
+* Flusso potenziale
+** Assiomi fondamentali
+    Proprietà fluido:
+    - Inviscido
+    - Incomprimibile
+    - Subsonico
+    - Stazionario
+    - Campo di velocità irrotazionale
+    Date queste ipotesti, le equazioni governanti il fluido risultano _lineari_. Grazie a questa proprietà, è possibile sovrapporre due soluzioni note per ricavare il risultato di una terza.
+** Circolazione
+    \begin{gather*}
+        \Gamma = \oint \mathbf v \cdot \vec{dl}
+        \end{gather*}
+    Ovvero, la circolazione è l'integrale curvilineo lungo un percorso chiuso.
+** Teorema di Stokes
+    Il flusso del rotore di un campo vettoriale $F$ attraverso una superficie $S$ è equivalente all'integrale di linea sul bordo della superficie $\Gamma$
+    \begin{gather*}
+    \oint_{\Gamma} \mathbf{F} \cdot \mathrm{d} \Gamma=\iint_{S}(\nabla \times \mathbf{F}) \cdot \hat{\mathbf{n}} d S
+    \end{gather*}
+** Equazione di Laplace
+    Partendo dall'equazione della circolazione:
+    \begin{gather*}
+        \Gamma = \oint \mathbf v \cdot \vec{dl}
+    \end{gather*}
+    è possibile applicare il teorema di Stokes per ottenere una forma equivalente di questo integrale
+    \begin{gather*}
+    \oint_{l} \mathbf{v} \cdot d \vec{l}=\iint_{s} (\nabla \times \mathbf v) d s = \iint_{s} \omega \cdot \vec{n} d s
+    \end{gather*}
+    Dato che il campo vettoriale della velocità è irrotazionale, $\nabla$ $\times$ $v$ = 0 ( e ovviamente $\omega$ = 0 ). Possiamo quindi affermare che :
+    \begin{gather*}
+    \oint_{l} \mathbf{v} \cdot d \vec{l} = 0
+    \end{gather*}
+    Quest'ultima equazione stipula l'esistenza di un campo vettoriale conservativo $\phi$ tale che $\mathbf v$ = $\nabla \phi$.
+    Sapendo anche che in un flusso incomprimibile \newline $\nabla$ $\cdot$ $\mathbf$ $v$ = 0, possiamo ricavare l'equazione di Laplace:
+    \begin{gather*}
+        \nabla ^2 \phi = 0
+    \end{gather*}
