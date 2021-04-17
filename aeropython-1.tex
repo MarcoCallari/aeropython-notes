@@ -1,4 +1,4 @@
-% Created 2021-03-07 dom 15:46
+% Created 2021-04-10 sab 15:34
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -22,7 +22,7 @@
  pdftitle={Appunti di Aerodinamica},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
+ pdfcreator={Emacs 27.2 (Org mode 9.5)}, 
  pdflang={English}}
 \begin{document}
 
@@ -31,21 +31,21 @@
 
 
 \section{Concetti base}
-\label{sec:org7dd996d}
+\label{sec:org0958fcc}
 \subsection{Punto di vista Lagrangiano}
-\label{sec:org241dc72}
+\label{sec:org0c64177}
 Seguo un volume di controllo nello spazio e ne descrivo l'evoluzione
 \subsection{Punto di vista Euleriano}
-\label{sec:org2751a2e}
+\label{sec:orgade065b}
 Fisso gli occhi su un punto in specifico e ne descrivo l'evoluzione
 \subsection{Differenziale di una funzione}
-\label{sec:orgf07af20}
+\label{sec:org6c687b9}
 Data una funzione \(f\) = \(f(x)\) il suo differenziale \(df\) è definito come:
 \begin{gather*}
 df(x,\Delta x) = \frac{df}{dx} \Delta x
 \end{gather*}
 \subsection{Derivazione derivata materiale}
-\label{sec:org7db525b}
+\label{sec:orgca1c942}
 Usata per esprimere la variazione di una proprietà del fluido da un punto di vista Lagrangiano (ovvero seguendo  l'evoluzione di un volume infitesimo di fluido)
 Definita come:
 \begin{gather*}
@@ -70,7 +70,7 @@ Può essere espressa anche come:
 \end{gather*}
 
 \subsection{Teorema del trasporto di Reynolds}
-\label{sec:org94e864d}
+\label{sec:orgdd03532}
 Data:
 \begin{itemize}
 \item Una funzione \(f\) che dipende da spazio e tempo \(f(x,t)\)
@@ -91,7 +91,7 @@ Dove:
 \end{itemize}
 
 \subsection{Equazione di conservazione della massa}
-\label{sec:org5bd522f}
+\label{sec:orgfc8d887}
 Derivata dal un punto di vista EULERIANO. Considero un volume infinitesimo che circonda un punto \(x\):
 @TODO aggiungere immagine
 Definisco \(\dot{m}(x)\) portata di fluido nel punto \(x\). Usando una serie di Taylor, posso descrivere la portata uscente dalla parete di destra del volume di controllo come:
@@ -128,10 +128,10 @@ Concludendo,
 \frac{d \rho}{dt} + \nabla \cdot (\rho \vector{v})= 0
 \end{gather*}
 \subsection{Equazione di conservazione della quantità di moto}
-\label{sec:orgb33a8f2}
+\label{sec:orgae07c3b}
 @TODO
 \subsection{Fluido incomprimibile \(\rightarrow\) \(\nabla \cdot \vector{v}\) = 0}
-\label{sec:org801e37e}
+\label{sec:orgbabbdd7}
 Data l'equazione di conservazione della massa,
 \begin{gather*}
 \frac{d \rho}{dt} + \nabla \cdot (\rho \vector{v})= 0
@@ -145,10 +145,10 @@ Ergo,
 \nabla \cdot \vector{v}= 0
 \end{gather*}
 \subsection{Relazione tra \(\Delta\) p \(\rightarrow\) \(\Delta\) v}
-\label{sec:orgeddd53b}
+\label{sec:org5570340}
 @TODO
 \subsection{Pathline, streamline, timeline, streakline}
-\label{sec:org3c472c7}
+\label{sec:orge0d19af}
 \begin{itemize}
 \item Pathline
 \end{itemize}
@@ -165,10 +165,29 @@ Dati n elementi normali alla velocità del fluido rilasciati nello stesso istant
 \item Streamline
 \end{itemize}
 Curva tangente in ogni punto alla velocità del fluido.
+\subsection{Equazione streamline}
+\label{sec:orge61ec06}
+Visto che la streamline deve essere tangente alla velocità in ogni punto, se prendo un segmento infinitesimo \(dS\) della streamline \(S\) posso dedurre geometricamente che
+\begin{gather*}
+    \frac{dY}{dX} = \frac{V}{U}
+\end{gather*}
+\begin{gather*}
+    \frac{dY}{V} = \frac{dX}{U}
+\end{gather*}
+\subsection{Streamfunction}
+\label{sec:org646206a}
+Funzione matematica \(\psi\) di ordine superiore alla velocità utilizzata per descrivere e visualizzare il flusso. Definita come:
+\begin{gather*}
+    \frac{d \psi}{dy} = u
+\end{gather*}
+\begin{gather*}
+    \frac{d \psi}{dx} = -v
+\end{gather*}
+\(\psi\) è costante lungo una streamline. @TODO: spiegare meglio.
 \section{Flusso potenziale}
-\label{sec:org879273f}
+\label{sec:org24abcc0}
 \subsection{Assiomi fondamentali}
-\label{sec:org1d2ed0a}
+\label{sec:orgb852d5d}
 Proprietà fluido:
 \begin{itemize}
 \item Inviscido
@@ -179,19 +198,19 @@ Proprietà fluido:
 \end{itemize}
 Date queste ipotesti, le equazioni governanti il fluido risultano \uline{lineari}. Grazie a questa proprietà, è possibile sovrapporre due soluzioni note per ricavare il risultato di una terza.
 \subsection{Circolazione}
-\label{sec:org0746f43}
+\label{sec:org21214e4}
 \begin{gather*}
     \Gamma = \oint \mathbf v \cdot \vec{dl}
-    \end{gather*}
+\end{gather*}
 Ovvero, la circolazione è l'integrale curvilineo lungo un percorso chiuso.
 \subsection{Teorema di Stokes}
-\label{sec:orgc3b3821}
+\label{sec:org0001313}
 Il flusso del rotore di un campo vettoriale \(F\) attraverso una superficie \(S\) è equivalente all'integrale di linea sul bordo della superficie \(\Gamma\)
 \begin{gather*}
 \oint_{\Gamma} \mathbf{F} \cdot \mathrm{d} \Gamma=\iint_{S}(\nabla \times \mathbf{F}) \cdot \hat{\mathbf{n}} d S
 \end{gather*}
 \subsection{Equazione di Laplace}
-\label{sec:orgd0f35a7}
+\label{sec:orgdedcb4f}
 Partendo dall'equazione della circolazione:
 \begin{gather*}
     \Gamma = \oint \mathbf v \cdot \vec{dl}
@@ -209,4 +228,16 @@ Sapendo anche che in un flusso incomprimibile \newline \(\nabla\) \(\cdot\) \(\m
 \begin{gather*}
     \nabla ^2 \phi = 0
 \end{gather*}
+\subsection{Source \& sink}
+\label{sec:org5ad3c1d}
+\subsubsection{Definizione}
+\label{sec:orgb302ebb}
+\subsubsection{Distribuzione velocità}
+\label{sec:org96820f2}
+\subsubsection{Potenziale}
+\label{sec:org74acd7a}
+\subsubsection{Streamline}
+\label{sec:orgb3a6862}
+\subsection{Doublet}
+\label{sec:org7b7216a}
 \end{document}

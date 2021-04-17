@@ -113,6 +113,23 @@ Data l'equazione di conservazione della massa,
     Dati n elementi normali alla velocità del fluido rilasciati nello stesso istante $t_0$, evidenzio la loro posizione ad un istante $t_1$. Utile per visualizzare il profilo di velocità attorno ad un profilo alare.
     - Streamline
     Curva tangente in ogni punto alla velocità del fluido.
+** Equazione streamline
+    Visto che la streamline deve essere tangente alla velocità in ogni punto, se prendo un segmento infinitesimo $dS$ della streamline $S$ posso dedurre geometricamente che
+    \begin{gather*}
+        \frac{dY}{dX} = \frac{V}{U}
+    \end{gather*}
+    \begin{gather*}
+        \frac{dY}{V} = \frac{dX}{U}
+    \end{gather*}
+**  Streamfunction
+Funzione matematica $\psi$ di ordine superiore alla velocità utilizzata per descrivere e visualizzare il flusso. Definita come:
+    \begin{gather*}
+        \frac{d \psi}{dy} = u
+    \end{gather*}
+    \begin{gather*}
+        \frac{d \psi}{dx} = -v
+    \end{gather*}
+$\psi$ è costante lungo una streamline. @TODO: spiegare meglio.
 * Flusso potenziale
 ** Assiomi fondamentali
     Proprietà fluido:
@@ -125,7 +142,7 @@ Data l'equazione di conservazione della massa,
 ** Circolazione
     \begin{gather*}
         \Gamma = \oint \mathbf v \cdot \vec{dl}
-        \end{gather*}
+    \end{gather*}
     Ovvero, la circolazione è l'integrale curvilineo lungo un percorso chiuso.
 ** Teorema di Stokes
     Il flusso del rotore di un campo vettoriale $F$ attraverso una superficie $S$ è equivalente all'integrale di linea sul bordo della superficie $\Gamma$
@@ -150,3 +167,9 @@ Data l'equazione di conservazione della massa,
     \begin{gather*}
         \nabla ^2 \phi = 0
     \end{gather*}
+** Source & sink
+*** Definizione
+*** Distribuzione velocità
+*** Potenziale
+*** Streamline
+** Doublet
