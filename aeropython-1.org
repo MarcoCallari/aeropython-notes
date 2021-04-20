@@ -177,4 +177,5 @@ $\psi$ è costante lungo una streamline. @TODO: spiegare meglio.
 *** Distribuzione velocità
 *** Potenziale
 *** Streamline
+*** Raggio del cilindro generato dalla sovrapposizione di un flusso uniforme ad un doublet
 *** Forma chiusa coefficiente di pressione sulla superficie del cilindro
