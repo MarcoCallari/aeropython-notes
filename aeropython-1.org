@@ -173,3 +173,8 @@ $\psi$ è costante lungo una streamline. @TODO: spiegare meglio.
 *** Potenziale
 *** Streamline
 ** Doublet
+*** Definizione
+*** Distribuzione velocità
+*** Potenziale
+*** Streamline
+*** Forma chiusa coefficiente di pressione sulla superficie del cilindro
