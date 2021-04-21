@@ -1,4 +1,4 @@
-% Created 2021-04-10 sab 15:34
+% Created 2021-04-17 sab 11:46
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -31,21 +31,21 @@
 
 
 \section{Concetti base}
-\label{sec:org0958fcc}
+\label{sec:orgbc00752}
 \subsection{Punto di vista Lagrangiano}
-\label{sec:org0c64177}
+\label{sec:orgb277e85}
 Seguo un volume di controllo nello spazio e ne descrivo l'evoluzione
 \subsection{Punto di vista Euleriano}
-\label{sec:orgade065b}
+\label{sec:org1951e8e}
 Fisso gli occhi su un punto in specifico e ne descrivo l'evoluzione
 \subsection{Differenziale di una funzione}
-\label{sec:org6c687b9}
+\label{sec:org0ca07f4}
 Data una funzione \(f\) = \(f(x)\) il suo differenziale \(df\) è definito come:
 \begin{gather*}
 df(x,\Delta x) = \frac{df}{dx} \Delta x
 \end{gather*}
 \subsection{Derivazione derivata materiale}
-\label{sec:orgca1c942}
+\label{sec:org91d4ca6}
 Usata per esprimere la variazione di una proprietà del fluido da un punto di vista Lagrangiano (ovvero seguendo  l'evoluzione di un volume infitesimo di fluido)
 Definita come:
 \begin{gather*}
@@ -70,7 +70,7 @@ Può essere espressa anche come:
 \end{gather*}
 
 \subsection{Teorema del trasporto di Reynolds}
-\label{sec:orgdd03532}
+\label{sec:org0500936}
 Data:
 \begin{itemize}
 \item Una funzione \(f\) che dipende da spazio e tempo \(f(x,t)\)
@@ -91,7 +91,7 @@ Dove:
 \end{itemize}
 
 \subsection{Equazione di conservazione della massa}
-\label{sec:orgfc8d887}
+\label{sec:org20cd8c9}
 Derivata dal un punto di vista EULERIANO. Considero un volume infinitesimo che circonda un punto \(x\):
 @TODO aggiungere immagine
 Definisco \(\dot{m}(x)\) portata di fluido nel punto \(x\). Usando una serie di Taylor, posso descrivere la portata uscente dalla parete di destra del volume di controllo come:
@@ -128,10 +128,10 @@ Concludendo,
 \frac{d \rho}{dt} + \nabla \cdot (\rho \vector{v})= 0
 \end{gather*}
 \subsection{Equazione di conservazione della quantità di moto}
-\label{sec:orgae07c3b}
+\label{sec:orgc8c24eb}
 @TODO
 \subsection{Fluido incomprimibile \(\rightarrow\) \(\nabla \cdot \vector{v}\) = 0}
-\label{sec:orgbabbdd7}
+\label{sec:org58aab6e}
 Data l'equazione di conservazione della massa,
 \begin{gather*}
 \frac{d \rho}{dt} + \nabla \cdot (\rho \vector{v})= 0
@@ -145,10 +145,10 @@ Ergo,
 \nabla \cdot \vector{v}= 0
 \end{gather*}
 \subsection{Relazione tra \(\Delta\) p \(\rightarrow\) \(\Delta\) v}
-\label{sec:org5570340}
+\label{sec:orge4aab30}
 @TODO
 \subsection{Pathline, streamline, timeline, streakline}
-\label{sec:orge0d19af}
+\label{sec:org5a77504}
 \begin{itemize}
 \item Pathline
 \end{itemize}
@@ -166,7 +166,7 @@ Dati n elementi normali alla velocità del fluido rilasciati nello stesso istant
 \end{itemize}
 Curva tangente in ogni punto alla velocità del fluido.
 \subsection{Equazione streamline}
-\label{sec:orge61ec06}
+\label{sec:orgd463c26}
 Visto che la streamline deve essere tangente alla velocità in ogni punto, se prendo un segmento infinitesimo \(dS\) della streamline \(S\) posso dedurre geometricamente che
 \begin{gather*}
     \frac{dY}{dX} = \frac{V}{U}
@@ -174,8 +174,14 @@ Visto che la streamline deve essere tangente alla velocità in ogni punto, se pr
 \begin{gather*}
     \frac{dY}{V} = \frac{dX}{U}
 \end{gather*}
+\subsection{Potenziale della velocità}
+\label{sec:orgb614d2d}
+Funzione \(\phi\) definita come:
+    \begin{gather*}
+\frac{\partial \phi}{\partial x} = v_x , \frac{\partial \phi}{\partial y} = v_y
+    \end{gather*}
 \subsection{Streamfunction}
-\label{sec:org646206a}
+\label{sec:org301627d}
 Funzione matematica \(\psi\) di ordine superiore alla velocità utilizzata per descrivere e visualizzare il flusso. Definita come:
 \begin{gather*}
     \frac{d \psi}{dy} = u
@@ -183,11 +189,11 @@ Funzione matematica \(\psi\) di ordine superiore alla velocità utilizzata per d
 \begin{gather*}
     \frac{d \psi}{dx} = -v
 \end{gather*}
-\(\psi\) è costante lungo una streamline. @TODO: spiegare meglio.
+\(\psi\) è costante lungo una streamline. @TODO: spiegare meglio ed aggiungere forma polare.
 \section{Flusso potenziale}
-\label{sec:org24abcc0}
+\label{sec:orgf026e3e}
 \subsection{Assiomi fondamentali}
-\label{sec:orgb852d5d}
+\label{sec:org9d5959c}
 Proprietà fluido:
 \begin{itemize}
 \item Inviscido
@@ -198,19 +204,19 @@ Proprietà fluido:
 \end{itemize}
 Date queste ipotesti, le equazioni governanti il fluido risultano \uline{lineari}. Grazie a questa proprietà, è possibile sovrapporre due soluzioni note per ricavare il risultato di una terza.
 \subsection{Circolazione}
-\label{sec:org21214e4}
+\label{sec:org3a2b329}
 \begin{gather*}
     \Gamma = \oint \mathbf v \cdot \vec{dl}
 \end{gather*}
 Ovvero, la circolazione è l'integrale curvilineo lungo un percorso chiuso.
 \subsection{Teorema di Stokes}
-\label{sec:org0001313}
+\label{sec:org9e3c350}
 Il flusso del rotore di un campo vettoriale \(F\) attraverso una superficie \(S\) è equivalente all'integrale di linea sul bordo della superficie \(\Gamma\)
 \begin{gather*}
 \oint_{\Gamma} \mathbf{F} \cdot \mathrm{d} \Gamma=\iint_{S}(\nabla \times \mathbf{F}) \cdot \hat{\mathbf{n}} d S
 \end{gather*}
 \subsection{Equazione di Laplace}
-\label{sec:orgdedcb4f}
+\label{sec:orgf4f368f}
 Partendo dall'equazione della circolazione:
 \begin{gather*}
     \Gamma = \oint \mathbf v \cdot \vec{dl}
@@ -228,16 +234,41 @@ Sapendo anche che in un flusso incomprimibile \newline \(\nabla\) \(\cdot\) \(\m
 \begin{gather*}
     \nabla ^2 \phi = 0
 \end{gather*}
-\subsection{Source \& sink}
-\label{sec:org5ad3c1d}
+\subsection{Source (sorgente)}
+\label{sec:org354ade4}
 \subsubsection{Definizione}
-\label{sec:orgb302ebb}
-\subsubsection{Distribuzione velocità}
-\label{sec:org96820f2}
-\subsubsection{Potenziale}
-\label{sec:org74acd7a}
+\label{sec:orgcf66bd0}
+Punto nello spazio che emette una portata \(\sigma\).
+\subsubsection{Distribuzione velocità flusso}
+\label{sec:org6b2dae1}
+Il flusso ha esclusivamente una componente radiale. È possibile ottenere una forma analitica della velocità in funzione della portata emessa dal punto. Considerando il caso 2D ed applicando il principio di conservazione della massa, ricavo un integrale di linea attorno alla sorgente:
+\begin{gather*}
+    \sigma = \int_{0}^{2\pi}{\rho u dl}
+\end{gather*}
+Sapendo che la velocità ha soltanto una componente radiale (per ipotesi),
+\begin{gather*}
+    \sigma = 2 \pi \rho u_r
+\end{gather*}
+\begin{gather*}
+    u_r = \frac{\sigma}{2 \pi \rho}
+\end{gather*}
+\subsubsection{Potenziale della velocità}
+\label{sec:org7cd008b}
+Ricordando la definizione di potenziale della velocità  (vedi capitolo \ref{sec:orgb614d2d})
 \subsubsection{Streamline}
-\label{sec:orgb3a6862}
+\label{sec:orgce9c3e3}
+\subsection{Sink (pozzo)}
+\label{sec:org8e94455}
+\subsubsection{Definizione}
+\label{sec:org3c0e2d0}
+Punto nello spazio in cui converge una portata \(\sigma\) (negativa).
+\subsubsection{Distribuzione velocità flusso}
+\label{sec:orgdabaff9}
+Il flusso ha esclusivamente una componente radiale. È possibile ottenere una forma analitica di questa componente radiale in funzione della portata emessa dal punto.
+\subsubsection{Potenziale}
+\label{sec:org1f0e7f4}
+\subsubsection{Streamline}
+\label{sec:org57a8b81}
 \subsection{Doublet}
-\label{sec:org7b7216a}
+\label{sec:orgc12bb1e}
 \end{document}

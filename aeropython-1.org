@@ -11,6 +11,7 @@ Fisso gli occhi su un punto in specifico e ne descrivo l'evoluzione
     \begin{gather*}
     df(x,\Delta x) = \frac{df}{dx} \Delta x
     \end{gather*}
+    @TODO spiegare meglio.
 ** Derivazione derivata materiale
 Usata per esprimere la variazione di una proprietà del fluido da un punto di vista Lagrangiano (ovvero seguendo  l'evoluzione di un volume infitesimo di fluido)
 Definita come:
@@ -121,7 +122,12 @@ Data l'equazione di conservazione della massa,
     \begin{gather*}
         \frac{dY}{V} = \frac{dX}{U}
     \end{gather*}
-**  Streamfunction
+** Potenziale della velocità
+Funzione $\phi$ definita come:
+    \begin{gather*}
+\frac{\partial \phi}{\partial x} = v_x , \frac{\partial \phi}{\partial y} = v_y
+    \end{gather*}
+** Streamfunction
 Funzione matematica $\psi$ di ordine superiore alla velocità utilizzata per descrivere e visualizzare il flusso. Definita come:
     \begin{gather*}
         \frac{d \psi}{dy} = u
@@ -129,7 +135,7 @@ Funzione matematica $\psi$ di ordine superiore alla velocità utilizzata per des
     \begin{gather*}
         \frac{d \psi}{dx} = -v
     \end{gather*}
-$\psi$ è costante lungo una streamline. @TODO: spiegare meglio.
+$\psi$ è costante lungo una streamline. @TODO: spiegare meglio ed aggiungere forma polare.
 * Flusso potenziale
 ** Assiomi fondamentali
     Proprietà fluido:
@@ -167,9 +173,32 @@ $\psi$ è costante lungo una streamline. @TODO: spiegare meglio.
     \begin{gather*}
         \nabla ^2 \phi = 0
     \end{gather*}
-** Source & sink
+** Source (sorgente)
 *** Definizione
-*** Distribuzione velocità
+Punto nello spazio che emette una portata $\sigma$.
+*** Distribuzione velocità flusso
+Il flusso ha esclusivamente una componente radiale. È possibile ottenere una forma analitica della velocità in funzione della portata emessa dal punto. Considerando il caso 2D ed applicando il principio di conservazione della massa, ricavo un integrale di linea attorno alla sorgente:
+    \begin{gather*}
+        \sigma = \int_{0}^{2\pi}{\rho u dl}
+    \end{gather*}
+Sapendo che la velocità ha soltanto una componente radiale (per ipotesi),
+    \begin{gather*}
+        \sigma = 2 \pi R \rho u_r
+    \end{gather*}
+    \begin{gather*}
+        u_r = \frac{\sigma}{2 \pi R \rho}
+    \end{gather*}
+*** Potenziale della velocità
+Ricordando la definizione di potenziale della velocità  (vedi capitolo [[Potenziale della velocità]])
+\begin{gather*}
+
+\end{gather*}
+*** Streamline
+** Sink (pozzo)
+*** Definizione
+Punto nello spazio in cui converge una portata $\sigma$ (negativa).
+*** Distribuzione velocità flusso
+Il flusso ha esclusivamente una componente radiale. È possibile ottenere una forma analitica di questa componente radiale in funzione della portata emessa dal punto.
 *** Potenziale
 *** Streamline
 ** Doublet
